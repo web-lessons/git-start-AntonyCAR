@@ -1,0 +1,25 @@
+.square{
+    display: flex;
+    width: 350px;
+    height: auto;
+    background-color: aquamarine;
+    margin: auto;
+    padding: 0;
+}
+.btn-buy{
+    height: 4.5em;
+    left: 180px;
+    bottom: 0;
+    position: absolute;
+}
+.square1{
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: aqua;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
