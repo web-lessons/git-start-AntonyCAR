@@ -3,70 +3,24 @@
  require_once "template/header.php";
 
  $query = "SELECT * FROM `products`";
- $result = mysqli_query($mysqli, $query);
- var_dump($result);
- $products = array(
-    0 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-    1 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-    2 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-    3 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-    4 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-    5 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-    6 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-    7 => array(
-        "name" => "Товар 1",
-        "img" => "https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg",
-        "description" => "Описание Товара",
-        "url" => "/",
-    ),
-);
+ $result = mysqli_query($conn, $query);
+ $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
     <img src="samsungs.jpg">
     
     <div class="row">
+
     <? foreach ($products as $key => $product):?>
         <div class="col">
-            <div class="square">
-                <img src="https://quke.ru/UserFiles/Landing/products/59690_photos_0.jpeg" alt="" width="150"
-                    height="170" class="d-inline-block align-top">
-                <h2>samSung Galaxy A10</h2><br>
-                <a class="btn-buy" href=""><button>Купить</button></a>
+            <div class="card">
+                <img src="<?php echo $product ['img']?>" alt="" width="150"
+                    height="300" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title"><?= $product ['name']?></h2>
+                        <p class="card-text"><?= $product ['description']?></p>
+                        <p class="card-text"><?= $product ['price']?> $</p>
+                    </div>
             </div>
         </div>
         <? endforeach; ?>

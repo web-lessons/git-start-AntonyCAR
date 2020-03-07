@@ -2,10 +2,10 @@
 $host = "127.0.0.1";
 $login = "root";
 $password = "";
-$database = "luboye_imya";
+$database = "shop";
 
-$mysqli = mysqli_connect($host, $login, $password);
+$conn = mysqli_connect($host, $login, $password, $database);
 
-if($mysqli->connect_error){
-    die("DB error");
+if(!$conn){
+    die("Ошибка подключения: ".mysqli_connect_error());
 }
