@@ -13,7 +13,7 @@
 <body background="">
     <nav class="navbar navbar-light bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="http://ohmygad.loc/glavniy.php">
+            <a class="navbar-brand" href="http://shop.loc/glavniy.php">
                 <img src="https://steamuserimages-a.akamaihd.net/ugc/83722391146447026/AB7E9ADD7039A0163986BF6955404EE0FE17A768/"
                     width="30" height="30" class="d-inline-block align-top" alt="">
                 AMSUNG
@@ -23,14 +23,17 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link"
-                            href="http://ohmygad.loc/glavniy.php">Главная<span
+                            href="http://shop.loc/glavniy.php">Главная<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="http://ohmygad.loc/index.php">Товары</a>
+                        <a class="nav-link" href="http://shop.loc/index.php">Товары</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="http://ohmygad.loc/korzina.php">Корзина</a>
+                        <a class="nav-link" href="http://shop.loc/korzina.php">Корзина</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="http://shop.loc/create.php">Создать</a>
                     </li>
                 </ul>
             </div>

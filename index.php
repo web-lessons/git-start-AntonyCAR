@@ -15,11 +15,13 @@
         <div class="col">
             <div class="card">
                 <img src="<?php echo $product ['img']?>" alt="" width="150"
-                    height="300" class="card-img-top">
+                    height="200" class="card-img-top">
                     <div class="card-body">
                         <h2 class="card-title"><?= $product ['name']?></h2>
                         <p class="card-text"><?= $product ['description']?></p>
                         <p class="card-text"><?= $product ['price']?> $</p>
+                        <a href="/product.php?id=<?= $product['id']?>">Подробнее</a>
+                        <a class='btn btn-danger' href="/delete.php?id=<?= $product['id']?>">DELETE</a>
                     </div>
             </div>
         </div>
